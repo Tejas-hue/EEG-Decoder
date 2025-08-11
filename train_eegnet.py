@@ -23,9 +23,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 
-# ------------------------------
+
 # Configuration (defaults)
-# ------------------------------
+
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA_ROOT = os.path.join(PROJECT_ROOT, "data", "physionet_raw")
@@ -43,9 +43,9 @@ FILE_SPLIT_SEED = 42
 MOTOR_EVENT_ID = {"T1": 0, "T2": 1}  # left=0, right=1
 
 
-# ------------------------------
+
 # Utility functions
-# ------------------------------
+
 
 def list_edf_files(data_root: str) -> List[str]:
     """Return sorted list of all EDF files under given root.
@@ -168,7 +168,7 @@ def gen_batches(
                 # Attach a flag for outlier (1) or normal (0) via last dimension pad if desired
                 buf_x.append(xi[..., np.newaxis])  # (C, T, 1)
                 buf_y.append(label)
-                # Note: we simply keep outliers; offline analysis can inspect energy values
+                
                 if len(buf_x) == batch_size:
                     yield np.stack(buf_x, axis=0), np.asarray(buf_y)
                     buf_x, buf_y = [], []
@@ -261,7 +261,7 @@ def main() -> None:
         RESAMPLE_HZ = None
     EPOCH_TMAX_S = float(args.tmax)
 
-    # Seed everything for reproducibility
+  
     os.environ["PYTHONHASHSEED"] = str(args.seed)
     random.seed(args.seed)
     np.random.seed(args.seed)
