@@ -1,0 +1,18 @@
+data_root: data/physionet_raw
+logs_dir: logs
+models_dir: models
+resample_hz: 128
+epoch:
+  tmin: 0.0
+  tmax: 4.0
+train:
+  epochs: 50
+  batch_size: 64
+  patience: 15
+  seed: 123
+model:
+  dropout_rate: 0.5
+  kern_length: 64
+  F1: 8
+  D: 2
+  pool_size: 4
