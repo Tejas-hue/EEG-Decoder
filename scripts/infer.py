@@ -7,6 +7,10 @@ from tensorflow import keras
 import mne
 import csv
 
+# Ensure repository root is on sys.path for direct script execution
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from train_eegnet import _per_epoch_zscore
 
 

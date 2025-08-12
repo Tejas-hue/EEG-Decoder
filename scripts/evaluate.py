@@ -10,6 +10,10 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
+# Ensure repository root is on sys.path for direct script execution
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from train_eegnet import list_edf_files, _first_valid_epoch_shape, _estimate_num_events, gen_batches, TRAIN_TEST_SPLIT
 
 
