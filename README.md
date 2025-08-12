@@ -62,6 +62,18 @@ python scripts/preprocess_eeg.py --data-root data/physionet_raw --out-root data/
 ```bash
 python scripts/evaluate.py --data-root data/physionet_raw --model models/eegnet_motor_imagery.keras --batch-size 128 --seed 123 --out-dir logs
 ```
+Example results (test split):
+
+```
+              precision    recall  f1-score   support
+
+          T1     0.7496    0.7452    0.7474      2045
+          T2     0.7467    0.7511    0.7489      2045
+
+    accuracy                         0.7482      4090
+   macro avg     0.7482    0.7482    0.7482      4090
+weighted avg     0.7482    0.7482    0.7482      4090
+```
 
 ## Inference on single EDF
 
