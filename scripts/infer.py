@@ -7,6 +7,9 @@ from tensorflow import keras
 import mne
 import csv
 
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from train_eegnet import _per_epoch_zscore
 
 
