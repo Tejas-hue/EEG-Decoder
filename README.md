@@ -1,3 +1,5 @@
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Tejas-hue/EEG-Decoder)
+
 # EEGNet Motor Imagery Training
 
 Train an EEGNet classifier on the PhysioNet EEG Motor Movement/Imagery dataset using MNE + TensorFlow.
